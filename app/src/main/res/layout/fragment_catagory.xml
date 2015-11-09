@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aaa="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/basicPaddingSize">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview_category"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_widthPercent="22%w" />
+
+    <com.zhy.android.percent.support.PercentLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_marginLeftPercent="1%w"
+        app:layout_widthPercent="78%w">
+
+        <com.daimajia.slider.library.SliderLayout
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="25%h"
+            custom:auto_cycle="true"
+            custom:indicator_visibility="visible"
+            custom:pager_animation="Accordion"
+            custom:pager_animation_span="1100" />
+
+        <com.cjj.MaterialRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            aaa:overlay="false"
+            aaa:progress_colors="@array/material_colors"
+            aaa:progress_show_circle_backgroud="false"
+            aaa:wave_height_type="higher"
+            aaa:wave_show="false"
+            app:layout_heightPercent="74%h"
+            app:layout_paddingTopPercent="1%h">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_wares"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.cjj.MaterialRefreshLayout>
+
+    </com.zhy.android.percent.support.PercentLinearLayout>
+
+</com.zhy.android.percent.support.PercentLinearLayout>
